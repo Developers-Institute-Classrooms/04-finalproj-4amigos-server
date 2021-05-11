@@ -10,6 +10,7 @@ app.use(cors());
 
 // Routes
 
+// testing 'hello world' response on the '/' path
 app.get("/", (req, res) => {
   res.json("Hello World");
 });
