@@ -1,0 +1,27 @@
+version: "3"
+services:
+  db:
+    image: postgres:12.5
+    ports:
+      - "5432:5432"
+    volumes:
+      - 4amigos-server-volume:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+  api:
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    command: npm run start
+    environment:
+      PGHOST: db
+      PGUSER: postgres
+      PGPASSWORD: password
+      PGPORT: 5432
+      PGDATABASE: postgres
+
+volumes:
+  4amigos-server-volume:
