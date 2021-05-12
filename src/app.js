@@ -11,8 +11,12 @@ app.use(cors());
 // Routes
 
 // testing 'hello world' response on the '/' path
-app.get("/", (req, res) => {
-  res.json("Hello World");
+app.get("/api", (req, res) => {
+  res.json({ message: "Hello World" });
+});
+
+app.get("/api/healthcheck", (req, res) => {
+  res.json({ message: "Health check working!" });
 });
 
 module.exports = app;
