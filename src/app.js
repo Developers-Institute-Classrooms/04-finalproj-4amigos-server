@@ -11,11 +11,11 @@ app.use(cors());
 // Routes
 
 // testing 'hello world' response on the '/' path
-app.get("/api", (req, res) => {
+app.get("/api", async (req, res) => {
   res.json({ message: "Hello World" });
 });
 
-app.get("/api/healthcheck", (req, res) => {
+app.get("/api/healthcheck", async (req, res) => {
   res.json({ message: "Health check working!" });
 });
 
