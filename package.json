@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Developers-Institute-Classrooms/04-finalproj-4amigos-server#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"    
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "jest": "^26.6.3",
