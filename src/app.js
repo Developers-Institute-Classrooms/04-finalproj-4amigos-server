@@ -19,4 +19,8 @@ app.get("/api/healthcheck", async (req, res) => {
   res.json({ message: "Health check working!" });
 });
 
+app.get("/api/reviews", async (req, res) => {
+  res.json({ message: "Reviews Page working!" });
+});
+
 module.exports = app;
