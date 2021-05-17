@@ -12,7 +12,7 @@ services:
     build:
       context: .
     ports:
-      - "5000:5000"
+      - "5500:5500"
     depends_on:
       - db
     command: npm run start
