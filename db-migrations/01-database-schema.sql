@@ -1,13 +1,10 @@
 BEGIN TRANSACTION;
-CREATE TABLE instructor (
-    instructor_id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    class VARCHAR(255) NOT NULL
-);
-CREATE TABLE student (
-    student_id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+CREATE TABLE review_persons (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
     class VARCHAR(255) NOT NULL,
+    person_type VARCHAR(25) NOT NULL,
 );
 CREATE TABLE term2_2021_reviews (
     name VARCHAR(255) NOT NULL,
