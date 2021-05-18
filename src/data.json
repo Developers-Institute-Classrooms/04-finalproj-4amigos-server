@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Leanne Graham",
+        "user_type": "Student",
+        "email": "Sincere@april.biz"      
+      },
+    {
+        "id": 2,
+        "name": "Ervin Howell",
+        "user_type": "Teacher",
+        "email": "Shanna@melissa.tv"      
+      },  
+    {
+        "id": 3,
+        "name": "Clementine Bauch",
+        "user_type": "Student",
+        "email": "Nathan@yesenia.net"      
+      },
+    {
+        "id": 4,
+        "name": "Patricia Lebsack",
+        "user_type": "Teacher",
+        "email": "Julianne.OConner@kory.org"      
+      },
+    {
+        "id": 5,
+        "name": "Chelsey Dietrich",
+        "user_type": "Teacher",
+        "email": "Lucio_Hettinger@annie.ca"      
+      }
+    
+]          
+        
