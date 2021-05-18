@@ -19,3 +19,4 @@ CREATE TABLE term2_2021_reviews (
     q5 NUMBER(5) NOT NULL,
     additional_feedback VARCHAR(500) NOT NULL
 );
+COMMIT;
