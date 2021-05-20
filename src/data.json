@@ -1,33 +1,43 @@
 [
     {
         "id": 1,
-        "name": "Leanne Graham",
-        "user_type": "Student",
-        "email": "Sincere@april.biz"      
+        "first_name": "Leanne",
+        "last_name": "Graham",
+        "email": "Sincere@april.biz",
+        "class_name": "enterprise",
+        "person_type": "student"      
       },
     {
         "id": 2,
-        "name": "Ervin Howell",
-        "user_type": "Teacher",
-        "email": "Shanna@melissa.tv"      
+        "first_name": "Ervin",
+        "last_name": "Howell",
+        "email": "Sincere@april.biz",
+        "class_name": "enterprise",
+        "person_type": "student"       
       },  
     {
         "id": 3,
-        "name": "Clementine Bauch",
-        "user_type": "Student",
-        "email": "Nathan@yesenia.net"      
+        "first_name": "Clementine",
+        "last_name": "Bauch",
+        "email": "Sincere@april.biz",
+        "class_name": "enterprise",
+        "person_type": "instructor"       
       },
     {
         "id": 4,
-        "name": "Patricia Lebsack",
-        "user_type": "Teacher",
-        "email": "Julianne.OConner@kory.org"      
+        "first_name": "Patricia",
+        "last_name": "Lebsack",
+        "email": "Sincere@april.biz",
+        "class_name": "enterprise",
+        "person_type": "instructor"      
       },
     {
         "id": 5,
-        "name": "Chelsey Dietrich",
-        "user_type": "Teacher",
-        "email": "Lucio_Hettinger@annie.ca"      
+        "first_name": "Chelsey",
+        "last_name": "Dietrich",
+        "email": "Sincere@april.biz",
+        "class_name": "enterprise",
+        "person_type": "student"      
       }
     
 ]          

@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const personDb = require("./services/persondb.js");
 
 const app = express();
 
@@ -28,6 +29,25 @@ app.get("/api/reviews", async (req, res) => {
 // get all
 app.get("/api/all-reviews", async (req, res) => {
   return res.json({ reviews });
+});
+
+// get student list
+app.get("/api/students", async (req, res) => {
+  try {
+    const studentList = await personDb.getAllStudents();
+    res.json(studentList);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.get("/api/instructors", async (req, res) => {
+  try {
+    const instructorList = await personDb.getAllInstructors();
+    res.json(instructorList);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
 });
 
 module.exports = app;

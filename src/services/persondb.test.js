@@ -6,7 +6,7 @@ const {
   createPerson,
   getAllStudents,
   getAllInstructors,
-} = require("./subjectdb");
+} = require("./persondb");
 
 describe("institute reviews", () => {
   it("should get a review by id", () => {

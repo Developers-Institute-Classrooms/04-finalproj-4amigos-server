@@ -11,21 +11,25 @@ const createPerson = async () => {
 // Get All student persons
 const getAllStudents = async () => {
   const studentSub = await pool.query(
-    "SELECT * FROM review_persons WHERE person_type = student"
+    "SELECT * FROM review_persons WHERE person_type = 'student'"
   );
-  return studentSub;
+  return studentSub.rows;
 };
 // Get All instructor persons
 const getAllInstructors = async () => {
   const instructorSub = await pool.query(
-    "SELECT * FROM review_persons WHERE person_type = instructor"
+    "SELECT * FROM review_persons WHERE person_type = 'instructor'"
   );
-  return instructorSub;
+  return instructorSub.rows;
 };
 // get one student subject
 
-// get on instructor subject
+// get one instructor subject
+
 // update subject
+// const updatePerson = async (id) => {
+//     await pool.query("UPDATE review_persons")
+// }
 // delete subject
 
 module.exports = {
