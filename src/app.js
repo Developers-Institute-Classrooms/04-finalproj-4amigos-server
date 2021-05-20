@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const personDb = require("./services/persondb.js");
 
 const app = express();
 
@@ -33,7 +34,7 @@ app.get("/api/all-reviews", async (req, res) => {
 // get student list
 app.get("/api/students", async (req, res) => {
   try {
-    const studentList = await getAllStudents();
+    const studentList = await personDb.getAllStudents();
     res.json(studentList);
   } catch (e) {
     res.status(500).json({ error: e.message });

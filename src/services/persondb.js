@@ -11,7 +11,7 @@ const createPerson = async () => {
 // Get All student persons
 const getAllStudents = async () => {
   const studentSub = await pool.query(
-    "SELECT * FROM review_persons WHERE person_type = student"
+    "SELECT * FROM review_persons WHERE person_type = 'student'"
   );
   return studentSub.rows;
 };
