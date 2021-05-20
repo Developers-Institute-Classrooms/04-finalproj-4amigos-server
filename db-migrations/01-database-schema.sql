@@ -1,8 +1,7 @@
 BEGIN TRANSACTION;
 CREATE TABLE review_persons (
     id SERIAL PRIMARY KEY,
-    first_name TEXT,
-    last_name text,
+    person_name TEXT,
     class_name VARCHAR(100) NOT NULL,
     person_type VARCHAR(25) NOT NULL
 );

@@ -22,14 +22,14 @@ app.get("/api/healthcheck", async (req, res) => {
 });
 
 // get one
-app.get("/api/reviews", async (req, res) => {
-  return res.json(reviews[0]);
-});
+// app.get("/api/reviews", async (req, res) => {
+//   return res.json(reviews[0]);
+// });
 
-// get all
-app.get("/api/all-reviews", async (req, res) => {
-  return res.json({ reviews });
-});
+// // get all
+// app.get("/api/all-reviews", async (req, res) => {
+//   return res.json({ reviews });
+// });
 
 // get student list
 app.get("/api/students", async (req, res) => {
