@@ -3,8 +3,8 @@ const pool = require("./db");
 // Create review person
 const createPerson = async () => {
   const newPerson = await pool.query(
-    "INSERT INTO review_persons VALUES ($1, $2, $3, $4, $5) RETURNING *",
-    [id, first_name, last_name, class_name, person_type]
+    "INSERT INTO review_persons VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
+    [id, first_name, last_name, email, class_name, person_type]
   );
   return newPerson;
 };
@@ -24,8 +24,12 @@ const getAllInstructors = async () => {
 };
 // get one student subject
 
-// get on instructor subject
+// get one instructor subject
+
 // update subject
+// const updatePerson = async (id) => {
+//     await pool.query("UPDATE review_persons")
+// }
 // delete subject
 
 module.exports = {

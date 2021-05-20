@@ -30,4 +30,14 @@ app.get("/api/all-reviews", async (req, res) => {
   return res.json({ reviews });
 });
 
+// get student list
+app.get("/api/students", async (req, res) => {
+  try {
+    const studentList = await getAllStudents();
+    res.json(studentList);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
 module.exports = app;

@@ -3,6 +3,7 @@ CREATE TABLE review_persons (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
     class_name VARCHAR(255) NOT NULL,
     person_type VARCHAR(25) NOT NULL,
 );
