@@ -2,6 +2,7 @@ BEGIN TRANSACTION;
 CREATE TABLE review_persons (
     id SERIAL PRIMARY KEY,
     person_name TEXT,
+    term VARCHAR(20),
     class_name VARCHAR(100) NOT NULL,
     person_type VARCHAR(25) NOT NULL
 );

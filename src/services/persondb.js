@@ -3,8 +3,8 @@ const pool = require("./db");
 // Create review person
 const createPerson = async () => {
   const newPerson = await pool.query(
-    "INSERT INTO review_persons VALUES ($1, $2, $3, $4) RETURNING *",
-    [id, person_name, class_name, person_type]
+    "INSERT INTO review_persons VALUES ($1, $2, $3, $4, $5) RETURNING *",
+    [id, person_name, term, class_name, person_type]
   );
   return newPerson;
 };

@@ -1,41 +1,41 @@
 [
     {
         "id": 1,
-        "first_name": "Leanne",
-        "last_name": "Graham",
+        "person_name": "Leanne Graham",
         "email": "Sincere@april.biz",
+        "term": "Term 2-2021",
         "class_name": "enterprise",
         "person_type": "student"      
       },
     {
         "id": 2,
-        "first_name": "Ervin",
-        "last_name": "Howell",
+        "person_name": "Ervin Howell",
         "email": "Sincere@april.biz",
+        "term": "Term 2-2021",
         "class_name": "enterprise",
         "person_type": "student"       
       },  
     {
         "id": 3,
-        "first_name": "Clementine",
-        "last_name": "Bauch",
+        "person_name": "Clementine Bauch",
         "email": "Sincere@april.biz",
+        "term": "Term 2-2021",
         "class_name": "enterprise",
         "person_type": "instructor"       
       },
     {
         "id": 4,
-        "first_name": "Patricia",
-        "last_name": "Lebsack",
+        "person_name": "Patricia Lebsack",
         "email": "Sincere@april.biz",
+        "term": "Term 2-2021",
         "class_name": "enterprise",
         "person_type": "instructor"      
       },
     {
         "id": 5,
-        "first_name": "Chelsey",
-        "last_name": "Dietrich",
+        "person_name": "Chelsey Dietrich",
         "email": "Sincere@april.biz",
+        "term": "Term 2-2021",
         "class_name": "enterprise",
         "person_type": "student"      
       }
