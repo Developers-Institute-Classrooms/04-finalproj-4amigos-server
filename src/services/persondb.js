@@ -18,7 +18,7 @@ const getAllStudents = async () => {
 // Get All instructor persons
 const getAllInstructors = async () => {
   const instructorSub = await pool.query(
-    "SELECT * FROM review_persons WHERE person_type = instructor"
+    "SELECT * FROM review_persons WHERE person_type = 'instructor'"
   );
   return instructorSub.rows;
 };

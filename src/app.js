@@ -41,4 +41,13 @@ app.get("/api/students", async (req, res) => {
   }
 });
 
+app.get("/api/instructors", async (req, res) => {
+  try {
+    const instructorList = await personDb.getAllInstructors();
+    res.json(instructorList);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
 module.exports = app;
