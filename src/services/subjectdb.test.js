@@ -1,5 +1,6 @@
 // const request = require("supertest")(test);
 const data = require("../data.json");
+data.reverse();
 
 const {
   createPerson,
@@ -16,16 +17,16 @@ describe("institute reviews", () => {
   // get student reviews
   it("should get all student reviews", () => {
     const studentReviews = getAllStudents("student");
-    studentReviews.map((data) => {
-      expect(review_persons.person_type).toEqual("student");
+    studentReviews.map((review) => {
+      expect(review.person_type).toEqual("student");
     });
   });
 
   // get instructor reviews
   it("should get all instructor reviews", () => {
     const instructorReviews = getAllInstructors("instructor");
-    instructorReviews.map((data) => {
-      expect(data.person_type).toEqual("instructor");
+    instructorReviews.map((review) => {
+      expect(review.person_type).toEqual("instructor");
     });
   });
 
@@ -44,7 +45,7 @@ describe("institute reviews", () => {
 
   //create instructor reviews
   it("should create a new instructor review with the correct id", () => {
-    const review = {
+    const newReviewer = {
       first_name: "PC",
       last_name: "Principal",
       class_name: "Full_Stack",
