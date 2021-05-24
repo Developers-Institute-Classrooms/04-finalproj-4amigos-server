@@ -8,6 +8,7 @@ const createPerson = async () => {
   );
   return newPerson;
 };
+
 // Get All student persons
 const getAllStudents = async () => {
   const studentSub = await pool.query(
