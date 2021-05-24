@@ -18,6 +18,7 @@ app.get("/api", async (req, res) => {
 
 // test healthcheck route
 app.get("/api/healthcheck", async (req, res) => {
+  console.log("Health check message hit");
   res.json({ message: "Health check working!" });
 });
 
