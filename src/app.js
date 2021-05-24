@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const personDb = require("./services/persondb.js");
+const reviewDb = require("./services/reviews.js");
 
 const app = express();
 
@@ -21,16 +22,6 @@ app.get("/api/healthcheck", async (req, res) => {
   res.json({ message: "Health check working!" });
 });
 
-// get one
-// app.get("/api/reviews", async (req, res) => {
-//   return res.json(reviews[0]);
-// });
-
-// // get all
-// app.get("/api/all-reviews", async (req, res) => {
-//   return res.json({ reviews });
-// });
-
 // get student list
 app.get("/api/students", async (req, res) => {
   try {
@@ -45,6 +36,16 @@ app.get("/api/instructors", async (req, res) => {
   try {
     const instructorList = await personDb.getAllInstructors();
     res.json(instructorList);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+// post a new review
+app.post("/api/review", async (req, res) => {
+  try {
+    const review = await newReview(req.body);
+    return res.json(review);
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
