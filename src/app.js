@@ -44,7 +44,7 @@ app.get("/api/instructors", async (req, res) => {
 // post a new review
 app.post("/api/review", async (req, res) => {
   try {
-    const review = await newReview(req.body);
+    const review = await reviewDb.createReview(req.body);
     return res.json(review);
   } catch (e) {
     res.status(500).json({ error: e.message });
