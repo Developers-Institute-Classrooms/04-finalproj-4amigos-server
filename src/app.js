@@ -49,7 +49,30 @@ app.get("/api/instructors", async (req, res) => {
 // post a new review
 app.post("/api/review", async (req, res) => {
   try {
-    const review = await createReview(req.body);
+    const { id } = req.body.id;
+    const { review_person } = req.body.review_person;
+    const { reviewer_name } = req.body.reviewer_name;
+    const { email } = req.body.email;
+    const { q1 } = req.body.q1;
+    const { q2 } = req.body.q2;
+    const { q3 } = req.body.q3;
+    const { q4 } = req.body.q4;
+    const { q5 } = req.body.q5;
+    const { additional_feedback } = req.body.additional_feedback;
+
+    const review = await createReview(
+      id,
+      review_person,
+      reviewer_name,
+      email,
+      q1,
+      q2,
+      q3,
+      q4,
+      q5,
+      additional_feedback
+    );
+
     return res.json(review);
   } catch (e) {
     res.status(404).json({ error: e.message });
