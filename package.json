@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/server.js",
     "db:migrate": "cross-var \"cd db-migrations && pg-migrator postgres://%PGUSER%:%PGPASSWORD%@%PGHOST%:%PGPORT%/%PGDATABASE%\"",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "dockercompose": "docker-compose down && docker-compose build && docker-compose up"
   },
   "repository": {
     "type": "git",
