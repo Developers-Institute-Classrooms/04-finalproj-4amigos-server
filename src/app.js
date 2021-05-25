@@ -1,7 +1,11 @@
 const express = require("express");
 const cors = require("cors");
-const personDb = require("./services/persondb.js");
-const reviewDb = require("./services/reviews.js");
+const { createReview } = require("./services/reviews.js");
+const {
+  createPerson,
+  getAllStudents,
+  getAllInstructors,
+} = require("./services/persondb.js");
 
 const app = express();
 
@@ -26,7 +30,7 @@ app.get("/api/healthcheck", async (req, res) => {
 // get student list
 app.get("/api/students", async (req, res) => {
   try {
-    const studentList = await personDb.getAllStudents();
+    const studentList = await getAllStudents();
     res.json(studentList);
   } catch (e) {
     res.status(500).json({ error: e.message });
@@ -35,7 +39,7 @@ app.get("/api/students", async (req, res) => {
 
 app.get("/api/instructors", async (req, res) => {
   try {
-    const instructorList = await personDb.getAllInstructors();
+    const instructorList = await getAllInstructors();
     res.json(instructorList);
   } catch (e) {
     res.status(500).json({ error: e.message });
@@ -45,7 +49,7 @@ app.get("/api/instructors", async (req, res) => {
 // post a new review
 app.post("/api/review", async (req, res) => {
   try {
-    const review = await reviewDb.createReview(req.body);
+    const review = await createReview(req.body);
     return res.json(review);
   } catch (e) {
     res.status(500).json({ error: e.message });
