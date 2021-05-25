@@ -42,7 +42,7 @@ app.get("/api/instructors", async (req, res) => {
     const instructorList = await getAllInstructors();
     res.json(instructorList);
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    res.status(404).json({ error: e.message });
   }
 });
 
@@ -52,7 +52,7 @@ app.post("/api/review", async (req, res) => {
     const review = await createReview(req.body);
     return res.json(review);
   } catch (e) {
-    res.status(500).json({ error: e.message });
+    res.status(404).json({ error: e.message });
   }
 });
 
