@@ -1,4 +1,4 @@
 BEGIN TRANSACTION;
 DROP TABLE review_persons;
-DROP TABLE term2_2021_reviews;
+DROP TABLE reviews;
 COMMIT;
