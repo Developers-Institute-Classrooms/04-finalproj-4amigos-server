@@ -70,7 +70,7 @@ app.post("/api/review", async (req, res) => {
       q5,
       additional_feedback
     );
-    console.log(res.json(review));
+
     return res.json(review);
   } catch (e) {
     res.status(500).json({ error: e.message });
