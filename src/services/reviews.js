@@ -15,7 +15,7 @@ const createReview = async (
   additional_feedback
 ) => {
   const newReview = await pool.query(
-    "INSERT INTO reviews (reviewer_name, email, review_person, term, class_name, q1, q2, q3, q4, q5, additional_feedback) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)",
+    "INSERT INTO reviews (reviewer_name, email, review_person, term, class_name, q1, q2, q3, q4, q5, additional_feedback) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING id",
     [
       reviewer_name,
       email,
