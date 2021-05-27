@@ -6,13 +6,11 @@ This server repository requires the client repository:
 To get the server started follow these steps:
 1. Install the dependencies:
     `npm install`
-2. Start the server: 
-   `npm start`
-3. Start a local docker container (make sure that your docker desktop is open):
+2. Start a local docker container (make sure that your docker desktop is open):
    `npm run dockercompose`
-4. When the docker container is running successfully in docker desktop free of errors you need to do database migration to start your databases run the following command in your terminal:
+3. When the docker container is running successfully in docker desktop free of errors you need to do database migration to start your databases run the following command in your terminal:
    `docker-compose run api npm run db:migrate` 
-5. Finally, if you have successfully started the server and successfully started the client repository, you should see a populated drop down menu and have the ability to save your filled out surveys to the database.
+4. Finally, if you have successfully started the server and successfully started the client repository, you should see a populated drop down menu and have the ability to save your filled out surveys to the database.
 
 ## AWS ##
 To have a view at the cloud production version of this application, follow these steps to retrieve the link:
