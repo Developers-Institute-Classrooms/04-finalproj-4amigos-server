@@ -1,13 +1,13 @@
 const pool = require("./db");
 
 // Create review person
-const createPerson = async () => {
-  const newPerson = await pool.query(
-    "INSERT INTO review_persons VALUES ($1, $2, $3, $4, $5) RETURNING *",
-    [id, person_name, term, class_name, person_type]
-  );
-  return newPerson;
-};
+// const createPerson = async () => {
+//   const newPerson = await pool.query(
+//     "INSERT INTO review_persons(person_name, term, class_name, person_type) VALUES ($1, $2, $3, $4) RETURNING id",
+//     [person_name, term, class_name, person_type]
+//   );
+//   return newPerson;
+// };
 
 // Get All student persons
 const getAllStudents = async () => {
@@ -23,18 +23,8 @@ const getAllInstructors = async () => {
   );
   return instructorSub.rows;
 };
-// get one student subject
-
-// get one instructor subject
-
-// update subject
-// const updatePerson = async (id) => {
-//     await pool.query("UPDATE review_persons")
-// }
-// delete subject
 
 module.exports = {
-  createPerson,
   getAllStudents,
   getAllInstructors,
 };
