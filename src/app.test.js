@@ -103,22 +103,22 @@ describe("GET /api", function () {
   });
 
   // Get Student List
-  it("should return student reviews", function (done) {
-    request
-      .get("/api/students")
-      .set("Accept", "application/json")
-      .expect("Content-Type", /json/)
-      .expect(200, done);
-  });
+  // it("should return student reviews", function (done) {
+  //   request
+  //     .get("/api/students")
+  //     .set("Accept", "application/json")
+  //     .expect("Content-Type", /json/)
+  //     .expect(200, done);
+  // });
 
-  // Get Instructor List
-  it("should return instructor reviews", function (done) {
-    request
-      .get("/api/instructors")
-      .set("Accept", "application/json")
-      .expect("Content-Type", /json/)
-      .expect(200, done);
-  });
+  // // Get Instructor List
+  // it("should return instructor reviews", function (done) {
+  //   request
+  //     .get("/api/instructors")
+  //     .set("Accept", "application/json")
+  //     .expect("Content-Type", /json/)
+  //     .expect(200, done);
+  // });
 });
 
 // // Create a new reviews
